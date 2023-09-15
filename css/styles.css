@@ -1,0 +1,52 @@
+* {
+    color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    font-family: 'Acme', sans-serif;
+}
+
+.head-image {
+    background: linear-gradient(rgb(13, 86, 129), #070766b4, rgba(31, 57, 209, 0.76)), url("/img/cryptimg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 40em;
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom:  2em;
+    font-size: 3em;
+}
+
+.main-content {
+    display: flex;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.enlace:not(:first-child) {
+    padding-top: 2em;
+}
+
+.enlace:last-child {
+    padding-bottom: 5em;
+}
+
+.footer {
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(13, 86, 129); */
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-content_copy {
+    color: rgb(255, 255, 255);
+
+}
+
+

@@ -1,0 +1,39 @@
+* {
+    color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    font-family: 'Acme', sans-serif;
+}
+
+.p1-header-image {
+    background: linear-gradient(rgb(13, 86, 129), #070766b4, rgba(31, 57, 209, 0.76)), url("/img/paisaje-violet.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 20em;
+}
+
+
+.p1-title {
+    /* background-color: blanchedalmond; */
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1-title-content {
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.backPage {
+    padding-left: 20em;
+    text-decoration: none;
+    font-size: 1.8em;
+}
