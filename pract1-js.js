@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /** DECLARACIÓN DE CONSTANTES **/
     const fileInput = document.getElementById("fileInput");
+    const fileInputDes = document.getElementById("fileInputDes");
     const botonCifrar = document.getElementById("botonCifrar");
     const textoCifrado = document.getElementById("textoCifrado");
     const botonDescifrar = document.getElementById("botonDescifrar");
@@ -35,23 +36,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /** BOTON DESCIFRAR **/
-    botonDescifrar.addEventListener("click", function() {
-        const valorCifrado = textoCifrado.value;
-        const contraseña = prompt("Ingrese la contraseña para descifrar:");
 
-        if(contraseña) {
-            try {
-                const descifrado = CryptoJS.AES.decrypt(valorCifrado, contraseña);
-                const textoDescifradoValue = descifrado.toString(CryptoJS.enc.Utf8);
-                textoDescifrado.value = textoDescifradoValue;
-                alert("El archivo se ha descifrado correctamente");
-            } catch(error) {
-                alert("Error al descifrar. Verificar contraseña");
-            }
+
+    // botonDescifrar.addEventListener("click", function() {
+    //     const valorCifrado = textoCifrado.value;
+    //     const contraseña = prompt("Ingrese la contraseña para descifrar:");
+
+    //     if(contraseña) {
+    //         try {
+    //             const descifrado = CryptoJS.AES.decrypt(valorCifrado, contraseña);
+    //             const textoDescifradoValue = descifrado.toString(CryptoJS.enc.Utf8);
+    //             textoDescifrado.value = textoDescifradoValue;
+    //             alert("El archivo se ha descifrado correctamente");
+    //         } catch(error) {
+    //             alert("Error al descifrar. Verificar contraseña");
+    //         }
+    //     } else {
+    //         alert ("Debe ingresar una contraseña");
+    //     }
+    // });
+
+
+    /** BOTON DESCIFRAR **/
+    botonDescifrar.addEventListener("click", function() {
+        const fileDes = fileInputDes.files[0];
+
+        if (fileDes) {
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const valueDes = event.target.result;
+                const contraseña = prompt("Ingresar contraseña para descifrar");
+
+                if (contraseña) {
+                    try {
+                        const descifrado = CryptoJS.AES.decrypt(valueDes, contraseña);
+                        const textoDescifradoValue = descifrado.toString(CryptoJS.enc.Utf8);
+                        textoDescifrado.value = textoDescifradoValue;
+                        alert("Archivo descifrado correctamente");
+                    } catch (error) {
+                        alert("Error al descifrar el archivo.");
+                    }
+                } else {
+                    alert("Ingresar una contraseña para descifrar");
+                }
+            };
+            reader.readAsText(fileDes);
         } else {
-            alert ("Debe ingresar una contraseña");
+            alert("Seleccionar un archivo de texto cifrado para descifrar");
         }
-    });
+    })
+
+
 
     /** BOTON DESCARGAR CIFRADO **/
     descargaCifrado.addEventListener("click", function () {
@@ -61,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const enlace = document.createElement("a");
         enlace.href = url;
-        enlace.download = "archivo_cifrado.txt";
+        enlace.download = "cancion_c.txt";
         enlace.click();
 
         URL.revokeObjectURL(url)
@@ -75,10 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const enlace = document.createElement("a");
         enlace.href = url;
-        enlace.download = "archivo_descifrado.txt";
+        enlace.download = "cancion_c_d.txt";
         enlace.click();
 
         URL.revokeObjectURL(url)
     })
-
 });
