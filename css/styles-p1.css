@@ -15,8 +15,46 @@
 }
 
 
+.main-alfabeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+td {
+    padding: 0.15rem;
+}
+
+.originalContents {
+    display: flex;
+    align-items: center;
+}
+
+.originalContents p {
+    margin-right: 30px;
+}
+
+#textoArchivo {
+    margin-right: 30px;
+}
+
+.convertedContent {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.convertedContent p {
+    margin-right: 30px;
+}
+
+.convertedContent button {
+    margin-left: 30px;
+}
+
 .p1-title {
-    /* background-color: blanchedalmond; */
     height: 20vh;
     display: flex;
     justify-content: center;
@@ -33,7 +71,36 @@
 }
 
 .backPage {
-    padding-left: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-size: 1.8em;
+    margin-bottom: 3em;
+}
+
+.footer {
+    height: 7em;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-content_copy {
+    color: white;
+}
+
+.footer-name {
+    color: white;
+}
+
+.footer-img {
+    width: 100px;
+    margin: 0;
+    padding: 0;
 }

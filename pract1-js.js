@@ -87,8 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 
-
-
     /** BOTON DESCARGAR CIFRADO **/
     descargaCifrado.addEventListener("click", function () {
         const valorCifrado = textoCifrado.value;

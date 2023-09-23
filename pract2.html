@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles-p1.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Práctica 2. Criptografía</title>
+</head>
+<body>
+
+    <header class="p1-header">
+        <div class="p1-header-image"></div>
+    </header>
+
+    <div class="p1-title">
+        <div class="p1-title-content">
+            <h1 class="p1-title-content_text">Práctica 2. Implementar - Modificación</h1>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="main-alfabeto">
+            <table>
+                <tr>
+                    <td>ALFABETO:</td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>F</td>
+                    <td>G</td>
+                    <td>H</td>
+                    <td>I</td>
+                    <td>J</td>
+                    <td>K</td>
+                    <td>L</td>
+                    <td>M</td>
+                    <td>N</td>
+                    <td>O</td>
+                    <td>P</td>
+                    <td>Q</td>
+                    <td>R</td>
+                    <td>S</td>
+                    <td>T</td>
+                    <td>U</td>
+                    <td>V</td>
+                    <td>W</td>
+                    <td>X</td>
+                    <td>Y</td>
+                    <td>Z</td>
+                </tr>
+                <tr>
+                    <td>EQUIVALENCIAS:</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                </tr>
+            </table>
+        </div>
+        <div class="main-content">
+            <div class="main-crypt">
+
+                <p>Aditivo:</p>
+                <input type="number" id="adiNumber">
+                <p id="resultadoAdi"></p>
+
+                <br><br>
+
+                <p>Multiplicativo:</p>
+                <input type="number" id="multNumber">
+                <p id="resultadoMulti"></p>
+
+                <br><br>
+
+                <input type="file" id="fileInput" accept=".txt">
+
+                <br><br><br><br>
+
+                <div class="originalContents">
+                    <p>Contenido Original:</p>
+                    <textarea id="textoArchivo" cols="30" rows="10"></textarea>
+    
+                    <p>Conversión a números:</p>
+                    <textarea name="" id="numericResult" cols="30" rows="10"></textarea>
+
+                    <br><br>
+                </div>
+
+                <div class="convertedContent">
+                    <p>Contenido Cifrado:</p>
+                    <textarea name="" id="letraResult" cols="30" rows="10"></textarea>
+                    <button id="descargaCifrado">Descargar Archivo Cifrado</button>
+                </div>
+
+                <br><br>
+
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <a class="backPage" href="/index.html">Volver</a>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-content_copy">Derechos reservados</h2>
+            <img class="footer-img" src="/img/gato-hacker.png" alt="gato-hacker">
+            <div class="footer-content_names">
+                <p class="footer-name">Domínguez Galán Erick</p>
+                <p class="footer-name">Loredo Cortes Luis Josué</p>
+                <p class="footer-name">Morales Vilchis Ariadne Dennise</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/pract2.js"></script>
+
+
+</body>
+</html>
