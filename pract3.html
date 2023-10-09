@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/styles-p1.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Práctica 1. Criptografía</title>
+    <title>Práctica 3. Criptografía</title>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 
     <div class="p1-title">
         <div class="p1-title-content">
-            <h1 class="p1-title-content_text">Práctica 1. Implementación de función criptográfica</h1>
+            <h1 class="p1-title-content_text">Práctica 3. Algoritmo de Euclídes (AE) <br> y Algoritmo Extendido de Euclídes (AEE)</h1>
         </div>
     </div>
 
@@ -90,11 +90,14 @@
         <div class="main-content">
 
             <div class="main-crypt">
-                <p class="formula-cifrado">Función de Cifrado: C= αp + β * modn</p>
+                <h4 class="formula-cifrado">Función de Cifrado: </h4>
+                <p>C= αp + β * mod n</p>
                 <br>
-                <p>Función de Descifrado: p = αpot(-1) [C+(-β)] * modn</p>
+                <h4>Función de Descifrado: </h4>
+                <p>p = αpot(-1) [C+(-β)] * mod n</p>
                 <br>
-                <p>Funcion que permita validar si un valor de alpha tiene inverso multiplicativo (AE) y encontrar el valor (AEE)</p>
+                <h4>Funcion que permita validar si un valor de alpha tiene inverso multiplicativo (AE) y encontrar el valor (AEE)</h4>
+                <p>MCD(α, n)=1</p>
 
                 <br><br><br>
 
@@ -130,15 +133,41 @@
                 <div id="resultadoCoprimo"></div>
                 <br>
                 <div id="resultadoNoCoprimo"></div>
+                <br>
+                <div id="inversoAditivo"></div>
+                <br>
+                <div id="inversoMultiplicativo"></div>
+                <br>
+        
+                <p id="cifradoRes"></p>
+                <br>
+                <p id="descifradoRes"></p>
 
+                <br>
+                <p id="descifradoRed"></p>
+                <br>
             </div>
+            
         </div>
 
         <br><br><br><br>
 
         <a class="backPage" href="/index.html">Volver</a>
 
-    </main>
-    <script src="pract3.js"></script>
+    </main> 
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-content_copy">Derechos reservados</h2>
+            <img class="footer-img" src="/img/gato-hacker.png" alt="gato-hacker">
+            <div class="footer-content_names">
+                <p class="footer-name">Domínguez Galán Erick</p>
+                <p class="footer-name">Loredo Cortes Luis Josué</p>
+                <p class="footer-name">Morales Vilchis Ariadne Dennise</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/pract3.js"></script>
 </body>
 </html>
