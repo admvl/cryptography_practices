@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles-p1.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Práctica 5. Criptografía</title>
+</head>
+<body>
+
+    <header class="p1-header">
+        <div class="p1-header-image"></div>
+    </header>
+
+    <div class="p1-title">
+        <div class="p1-title-content">
+            <h1 class="p1-title-content_text">Práctica 5. CIFRADOR POR BLOQUES (AES)</h1>
+        </div>
+    </div>
+
+    <main class="main">
+        <div style="text-align: center;">
+            <input type="radio" name="modo" value="ECB" id="ECB"> ECB
+            <input type="radio" name="modo" value="CBC" id="CBC"> CBC
+            <input type="radio" name="modo" value="CFB" id="CFB"> CFB
+            <input type="radio" name="modo" value="OFB" id="OFB"> OFB
+            <br><br>
+            Llave:
+            <input type="text" id="llave" maxlength="16">
+            <br><br>
+            Vector C0:
+            <input type="text" id="C0" maxlength="16">
+            <br><br>
+            <button id="limpiar">Limpiar</button>
+            <br><br>
+        </div>
+        <div class="main-content">
+            <div class="main-crypt">
+                <input type="file" id="fileInput" accept=".bmp">
+                <br><br>
+                <button id="botonCifrar">Cifrar</button>
+                <br><br>
+                <button id="descargaCifrado">Descargar Archivo Cifrado</button>
+                <br><br>
+                <table id="tableCif">
+                    
+                </table>
+            </div>
+            <div class="main-content_decrypt">
+                
+                <input type="file" id="fileInputDes" accept=".bmp">
+                <br><br>
+                <button id="botonDescifrar">Descifrar</button>
+                <br><br>
+                <button id="descargaDescifrado">Descargar Archivo Descifrado</button>
+                <br><br>
+                <table id="tableDes">
+                   
+                </table>
+            </div>
+        </div>
+        <br><br><br><br>
+
+        <a class="backPage" href="/index.html">Volver</a>
+
+    </main>
+
+
+
+
+    <script src="pract5.js"></script>
+    <!-- <script src="/node_modules/crypto-js/crypto-js.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.3.0/crypto-js.js"></script>
+</body>
+</html>
